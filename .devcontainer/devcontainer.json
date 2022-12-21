@@ -4,6 +4,9 @@
 	"name": "Docker outside of Docker",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
+	"settings": {
+		"python.defaultInterpreterPath": "/home/vscode/.cache/pypoetry/virtualenvs/"
+	},
 	"features": {
 		"ghcr.io/devcontainers/features/docker-from-docker:1": {
 			"version": "latest",
