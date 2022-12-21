@@ -24,7 +24,18 @@
 	// "forwardPorts": [],
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "docker --version",
-	"postCreateCommand": "poetry env use -C ./backend /usr/local/python/current/bin/python && poetry install -C ./backend"
+	"postCreateCommand": "poetry env use -C ./backend /usr/local/python/current/bin/python && poetry install -C ./backend",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"streetsidesoftware.code-spell-checker",
+				"formulahendry.code-runner",
+				"oderwat.indent-rainbow",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"VisualStudioExptTeam.intellicode-api-usage-examples"
+			]
+		}
+	}
 	// Configure tool-specific properties.
 	// "customizations": {},
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
