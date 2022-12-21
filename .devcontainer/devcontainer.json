@@ -4,9 +4,6 @@
 	"name": "Docker outside of Docker",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
-	"settings": {
-		"python.PYTHONPATH": "./backend/.venv/bin/python"
-	},
 	"features": {
 		"ghcr.io/devcontainers/features/docker-from-docker:1": {
 			"version": "latest",
@@ -27,7 +24,7 @@
 	// "forwardPorts": [],
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "docker --version",
-	"postCreateCommand": "poetry config virtualenvs.in-project true && poetry env use -C ./backend /usr/local/python/current/bin/python && poetry install -C ./backend",
+	"postCreateCommand": "poetry env use -C ./backend /usr/local/python/current/bin/python && poetry install -C ./backend",
 	"customizations": {
 		"vscode": {
 			"extensions": [
